@@ -1,49 +1,52 @@
 <template>
-  <button @click="fetchData">Mostrar datos Api 1</button>
+  <div class="Main">
+    <button @click="fetchData">Mostrar datos Api 1</button>
 
-  <div v-if="data1.length > 0">
-    <h3>Countries API 1</h3>
-    <ul>
-      <li v-for="(country, index) in data1" :key="index">
-        {{ country.country }} - Población: {{ country.populationCounts[0].value }}
-      </li>
-    </ul>
-  </div>
+    <div v-if="data1.length > 0">
+      <h3>Countries API 1</h3>
+      <ul>
+        <li v-for="(country, index) in data1" :key="index">
+          {{ country.country }} - Población: {{ country.populationCounts[0].value }}
+        </li>
+      </ul>
+    </div>
 
-  <button @click="fetchData2">Mostrar datos Api 2</button>
+    <button @click="fetchData2">Mostrar datos Api 2</button>
 
-  <div v-if="data2.length > 0">
-    <h3>Anime API 2</h3>
-    <ul>
-      <li v-for="anime in data2" :key="anime.mal_id">
-        <img :src="anime.image" :alt="anime.title" />
-        <p>{{ anime.title }}</p>
-      </li>
-    </ul>
-  </div>
+    <div v-if="data2.length > 0">
+      <h3>Anime API 2</h3>
+      <ul>
+        <li v-for="anime in data2" :key="anime.mal_id">
+          <img :src="anime.image" :alt="anime.title" />
+          <p>{{ anime.title }}</p>
+        </li>
+      </ul>
+    </div>
 
-  <button @click="fetchData3">Mostrar datos Api 3</button>
+    <button @click="fetchData3">Mostrar datos Api 3</button>
 
-  <div v-if="data3.length > 0">
-    <h3>Wish Cat API 3</h3>
-    <ul>
-      <li v-for="anime in data3" :key="anime.mal_id">
-        <img :src="anime.image" :alt="anime.title" />
-        <p>{{ anime.title }}</p>
-      </li>
-    </ul>
-  </div>
+    <div v-if="data3.length > 0">
+      <h3>Wish Cat API 3</h3>
+      <ul>
+        <li v-for="anime in data3" :key="anime.mal_id">
+          <img :src="anime.image" :alt="anime.title" />
+          <p>{{ anime.title }}</p>
+        </li>
+      </ul>
+    </div>
 
-  <button @click="fetchData4">Mostrar datos Api 4</button>
+    <button @click="fetchData4">Mostrar datos Api 4</button>
 
-  <div v-if="data4.length > 0">
-    <h3>Random Manga API 4</h3>
-    <ul>
-      <li v-for="manga in data4" :key="manga.mal_id">
-        <img :src="manga.image" :alt="manga.title" />
-        <p>{{ manga.title }}</p>
-      </li>
-    </ul>
+    <div v-if="data4.length > 0">
+      <h3>Random Manga API 4</h3>
+      <ul>
+        <li v-for="manga in data4" :key="manga.mal_id">
+          <img :src="manga.image" :alt="manga.title" />
+          <p>{{ manga.title }}</p>
+        </li>
+      </ul>
+    </div>
+
   </div>
   
 </template>
@@ -115,3 +118,11 @@ const fetchData4 = async () => {
   }
 }
 </script>
+
+<style scoped>
+.Main{
+  display: flex;
+  flex-direction: column;
+}
+
+</style>
