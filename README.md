@@ -1,5 +1,14 @@
 # taller3
 
+
+Se despliega en la página los siguientes endpoints:
+
+1. countriesnow.space/api/v0.1/countries/population
+2. api.jikan.moe/v4/recommendations/anime
+3. api.jikan.moe/v4/random/anime
+4. api.jikan.moe/v4/random/manga
+
+
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
