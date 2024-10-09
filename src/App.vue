@@ -26,7 +26,7 @@
     <button @click="fetchData3">Mostrar datos Api 3</button>
 
     <div v-if="data3.length > 0">
-      <h3>Wish Cat API 3</h3>
+      <h3>Random Anime API 3</h3>
       <ul>
         <li v-for="anime in data3" :key="anime.mal_id">
           <img :src="anime.image" :alt="anime.title" />
